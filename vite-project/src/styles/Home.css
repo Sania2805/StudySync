@@ -1,0 +1,187 @@
+
+.home-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #f9f7ff, #eaf1ff);
+  background-size: cover;
+  padding: 2rem;
+  overflow-y: auto;
+  font-family: "Poppins", sans-serif;
+}
+
+.overlay {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 25px;
+  padding: 3rem 2rem;
+  width: 90%;
+  max-width: 800px;
+  box-shadow: 0 8px 30px rgba(180, 180, 255, 0.25);
+}
+
+.home-content {
+  text-align: center;
+  color: #444;
+}
+
+.greeting-box h2 {
+  font-size: 1.8rem;
+  color: #5a5adb;
+  margin-bottom: 0.5rem;
+}
+
+.greeting-box p {
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.name-input-section input {
+  border: none;
+  border-radius: 12px;
+  padding: 0.7rem 1rem;
+  font-size: 1rem;
+  margin-top: 0.8rem;
+  outline: none;
+  box-shadow: 0 0 0 1px #ccc;
+  transition: all 0.3s ease;
+  width: 70%;
+}
+
+.name-input-section input:focus {
+  box-shadow: 0 0 10px rgba(160, 160, 255, 0.5);
+}
+
+.name-input-section button,
+.goal-edit button {
+  margin-top: 1rem;
+  background: linear-gradient(135deg, #aeb8ff, #9aa5ff);
+  color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(150, 160, 255, 0.3);
+}
+
+.name-input-section button:hover,
+.goal-edit button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(130, 140, 255, 0.4);
+}
+
+
+.quote-box {
+  margin: 2rem 0 1rem 0;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 18px;
+  padding: 1rem 1.5rem;
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #555;
+  box-shadow: 0 4px 12px rgba(190, 190, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+.quote-box:hover {
+  transform: scale(1.02);
+}
+
+.stats-section {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 1.2rem;
+  border-radius: 16px;
+  width: 30%;
+  min-width: 140px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(170, 170, 255, 0.25);
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 20px rgba(140, 150, 255, 0.35);
+}
+
+.stat-card h3 {
+  font-size: 1.4rem;
+  color: #6565f1;
+}
+
+.stat-card p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+
+.goal-section {
+  margin-top: 2rem;
+}
+
+.goal-display,
+.goal-edit {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 14px;
+  padding: 1rem 1.2rem;
+  box-shadow: 0 4px 15px rgba(180, 180, 255, 0.25);
+  transition: all 0.3s ease;
+}
+
+.goal-display:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 20px rgba(140, 140, 255, 0.3);
+}
+
+.goal-edit input {
+  border: none;
+  border-radius: 10px;
+  padding: 0.6rem;
+  width: 70%;
+  font-size: 1rem;
+  outline: none;
+  box-shadow: 0 0 0 1px #ccc;
+  transition: all 0.3s ease;
+}
+
+.goal-edit input:focus {
+  box-shadow: 0 0 10px rgba(160, 160, 255, 0.5);
+}
+
+.music-player {
+  margin-top: 2rem;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(170, 180, 255, 0.3);
+  transition: all 0.4s ease;
+}
+
+.music-player:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(150, 160, 255, 0.35);
+}
+
+footer {
+  margin-top: 2rem;
+  font-size: 0.95rem;
+  color: #666;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 12px;
+  padding: 0.8rem;
+  box-shadow: 0 2px 8px rgba(190, 190, 255, 0.2);
+  transition: all 0.4s ease;
+}
+
+footer:hover {
+  background: rgba(255, 255, 255, 0.8);
+}

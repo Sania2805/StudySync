@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+.pomodoro-dark {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background: url('https://wallpapers.com/images/hd/white-luxury-collage-doodles-pinterest-aesthetic-o3jj48m2y0b90mys.jpg') no-repeat center/cover;
+  font-family: 'Poppins', sans-serif;
+}
+
+.glass-dark {
+  background: rgba(255, 255, 255, 0.25); /* lighter to see bg */
+  backdrop-filter: blur(4px);
+  border-radius: 25px;
+  padding: 2rem 3rem;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  text-align: center;
+  color: hsl(0, 5%,20%);
+  width: 340px;
+}
+
+
+.mode-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: #444;
+}
+
+.circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+.progress-ring {
+  transform: rotate(-90deg);
+}
+
+.progress-ring-bg {
+  fill: none;
+  stroke: #e0e0e0;
+  stroke-width: 8;
+}
+
+.progress-ring-bar {
+  fill: none;
+  stroke: #4f46e5;
+  stroke-width: 8;
+  stroke-linecap: round;
+  stroke-dasharray: 339;
+  stroke-dashoffset: 339;
+  transition: stroke-dashoffset 0.5s linear;
+}
+
+.time {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.btn-dark {
+  background: #4f46e5;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-dark:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+}
+
+.btn-dark.secondary {
+  background: #e5e7eb;
+  color: #333;
+}
+
+.btn-dark.accent {
+  background: #facc15;
+  color: #000;
+}
+
+.settings {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+  color: #555;
+  font-size: 0.9rem;
+}
+
+.settings select {
+  background: #f3f4f6;
+  color: #333;
+  border: none;
+  border-radius: 8px;
+  padding: 0.3rem 0.6rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.session {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.quote {
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: #6b7280;
+}
