@@ -16,6 +16,12 @@ A minimal and aesthetic productivity app to help you **focus, organize, and trac
 - **Random Quotes** 💡 – Get inspired with motivational quotes.
 
 ---
+## 💻 Tech Stack
+- **Frontend:** React.js  
+- **Styling:** CSS, Framer Motion (for animations)  
+- **Storage:** Local Storage (for notes, tasks, and sessions)  
+- **APIs:** Quotes API (for motivational quotes)  
+---
 
 ## 🔗 Live Demo
 Check out the live app here: [Study Sync Live](https://study-sync2.netlify.app/)  
