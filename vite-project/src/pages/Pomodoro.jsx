@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import "../styles/PomodoroTimer.css";
+import { motion, AnimatePresence } from "framer-motion";
 
 const PomodoroTimer = () => {
   const [focusDuration, setFocusDuration] = useState(25);
@@ -70,9 +71,19 @@ const PomodoroTimer = () => {
   const progress = ((totalTime - timeLeft) / totalTime) * 100;
 
   return (
-    <div className="pomodoro-dark">
-      <div className="glass-dark">
-        <h2 className="mode-title">{isBreak ? "Break Time ☕" : "Focus Mode 🔥"}</h2>
+    <motion.div className="pomodoro-dark"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}>
+      <motion.div className="glass-dark"
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}>
+        <motion.h2 className="mode-title"
+        initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.2, duration: 0.8 }}>
+              {isBreak ? "Break Time ☕" : "Focus Mode 🔥"}</motion.h2>
 
         <div className="circle">
           <svg className="progress-ring" viewBox="0 0 120 120">
@@ -128,8 +139,8 @@ const PomodoroTimer = () => {
 
         <p className="session">Pomodoros Completed: {sessionCount}</p>
         <p className="quote">“{quote}”</p>
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 };
 

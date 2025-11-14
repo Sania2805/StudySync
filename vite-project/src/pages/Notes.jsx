@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "../styles/Notes.css";
-
+import { motion, AnimatePresence } from "framer-motion";
 const Notes = () => {
   const [notes, setNotes] = useState(() => {
     const saved = localStorage.getItem("studyNotes");
@@ -84,8 +84,15 @@ const Notes = () => {
   }, []);
 
   return (
-    <div className="note-container">
-    <div className="notes">
+    <motion.div className="note-container"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}>
+    <motion.div className="notes"
+      initial={{ opacity: 0, y: 40 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 1, ease: "easeOut" }}
+    >
       <h2 className="notes-title">My Notes 📝</h2>
 
       <div className="notes-inputs">
@@ -141,8 +148,8 @@ const Notes = () => {
           <p className="no-notes">No notes found...</p>
         )}
       </div>
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
   );
 };
 

@@ -3,7 +3,7 @@ import "../styles/To-do.css";
 import Notasks from "../components/No-tasks";
 import confetti from "canvas-confetti";
 import { useEffect } from "react";
-
+import { motion, AnimatePresence } from "framer-motion";
 function Todo() {
   const [tasks, setTasks] = useState(() => {
 
@@ -117,8 +117,14 @@ function Todo() {
         crossOrigin="anonymous"
         referrerPolicy="no-referrer"
       />
-      <div className="container">
-        <div className="todo-app">
+      <motion.div className="container"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}>
+        <motion.div className="todo-app"
+          initial={{ opacity: 0, y: 40 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, ease: "easeOut" }}>
           <h1>To-Do List</h1>
           <div className="stat-container">
             <div className="details">
@@ -182,8 +188,8 @@ function Todo() {
               </div>
             )}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </div>
   );
 }
