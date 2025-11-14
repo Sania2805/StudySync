@@ -127,3 +127,45 @@
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
 }
+.toggle-switch{
+  width: 85px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #d0e8ff;
+  position: relative;
+  padding: 5px;
+}
+.switch{
+  width: 30px;
+  height: 30px;
+  border-radius: 20px;
+  display: flex;
+  background-color: white;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+.light {
+  background-image: url("https://cdn3.iconfinder.com/data/icons/summer-189/64/sun_bright_sunlight-512.png");
+  transform: translateX(0);
+}
+.dark{
+  background-color: #4949e2;
+  transform: translateX(45px);
+  -webkit-transform: translateX(45px);
+  -moz-transform: translateX(45px);
+  -ms-transform: translateX(45px);
+  -o-transform: translateX(45px);
+}
+.toggle-icon {
+  color: white;
+  font-size: 18px;
+  margin: auto;          
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.light .toggle-icon {
+  color: orange;          
+}
+
+.dark .toggle-icon {
+  color: #fff;            
+}

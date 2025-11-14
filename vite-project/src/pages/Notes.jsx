@@ -18,7 +18,7 @@ const Notes = () => {
   }, [notes]);
 
   const handleAddNote = () => {
-    const colors = ["#FFEB99", "#FFB6B9", "#C3F0CA", "#B5EAEA", "#f0b791ff", "#E2F0CB", "#F8E9A1"];
+    const colors = ["#FFEB99", "#FFB6B9", "#C3F0CA", "#B5EAEA", "#f0b791", "#E2F0CB", "#F8E9A1"];
 
     if (!title.trim() && !content.trim()) return;
     const selectedColor = colors[colorIndex];
@@ -125,7 +125,8 @@ const Notes = () => {
           <div
             className={`note-card ${expandedNoteId === note.id ? "expanded" : ""}`}
             key={note.id}
-            style={{ backgroundColor: note.color }}
+            style={{backgroundColor: note.color}}
+
             onClick={(e) => {
               e.stopPropagation();
               handleCardClick(note.id);

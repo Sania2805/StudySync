@@ -177,3 +177,93 @@
   background-color: hsl(308, 48%, 99%);
 }
 
+body.dark-mode .note-container {
+  background-color: #0b0f1a !important; /* deep navy */
+}
+
+
+body.dark-mode .notes {
+  background-color: #15182b !important;
+  border: 2px solid rgba(102, 92, 217, 0.4) !important;
+  box-shadow: 0 0 30px rgba(102, 92, 217, 0.15) !important;
+  color: #e1dafc !important;
+}
+
+body.dark-mode .notes-title {
+  color: #a892ff !important; /* lavender */
+}
+
+
+body.dark-mode .notes-inputs input,
+body.dark-mode .notes-inputs textarea {
+  background-color: #1d2038 !important;
+  border: 1px solid #3f3b71 !important;
+  color: #e1dafc !important;
+}
+
+body.dark-mode .notes-inputs input::placeholder,
+body.dark-mode .notes-inputs textarea::placeholder {
+  color: #7c74b8 !important;
+}
+
+body.dark-mode .search-bar {
+  background-color: #1d2038 !important;
+  border: 1px solid #3f3b71 !important;
+  color: #e1dafc !important;
+}
+
+body.dark-mode .search-bar::placeholder {
+  color: #7c74b8 !important;
+}
+
+
+body.dark-mode .note-card {
+  background-color: var(--note-dark-bg) !important;
+  color: #e1dafc !important;
+  border: 1px solid rgba(132, 118, 255, 0.25) !important;
+  box-shadow: 0 5px 20px rgba(132, 118, 255, 0.1) !important;
+}
+
+body.dark-mode .note-card:hover {
+  box-shadow: 0 0 20px rgba(150, 130, 255, 0.25) !important;
+}
+
+body.dark-mode .note-card h3 {
+  color: #b9a7ff !important;
+}
+
+body.dark-mode .note-card p {
+  color: #e1dafc !important;
+}
+
+body.dark-mode .note-card small {
+  color: #8c84c9 !important;
+}
+
+body.dark-mode .note-actions button:first-child {
+  background-color: #6c5ce7 !important;  /* royal purple */
+  color: #ffffff !important;
+}
+
+body.dark-mode .note-actions button:first-child:hover {
+  background-color: #5a4dd6 !important;
+}
+
+body.dark-mode .note-actions button:nth-child(2) {
+  background-color: #d65f88 !important; /* purple-pink */
+  color: white !important;
+}
+
+body.dark-mode .note-actions button:nth-child(2):hover {
+  background-color: #c44a74 !important;
+}
+
+body.dark-mode .no-notes {
+  color: #a892ff !important;
+}
+
+body.dark-mode .note-card.expanded {
+  background-color: #15182b !important;
+  color: #e1dafc !important;
+  border: 1px solid rgba(132, 118, 255, 0.3) !important;
+}

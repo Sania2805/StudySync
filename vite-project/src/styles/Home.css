@@ -185,3 +185,109 @@ footer {
 footer:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+
+.dark-mode .home-container {
+  background: linear-gradient(135deg, #0d0d0d, #1a1a1a);
+  color: #eee;
+}
+
+.dark-mode .overlay {
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+}
+
+.dark-mode .home-content {
+  color: #eaeaea;
+}
+
+.dark-mode .greeting-box h2 {
+  color: #9ba8ff;
+}
+
+.dark-mode .greeting-box p {
+  color: #ccc;
+}
+
+.dark-mode .name-input-section input,
+.dark-mode .goal-edit input {
+  background: #1e1e1e;
+  color: #f1f1f1;
+  box-shadow: 0 0 0 1px #444;
+}
+
+.dark-mode .name-input-section input:focus,
+.dark-mode .goal-edit input:focus {
+  box-shadow: 0 0 10px rgba(120, 120, 255, 0.5);
+}
+
+.dark-mode .name-input-section button,
+.dark-mode .goal-edit button {
+  background: linear-gradient(135deg, #4c4f9a, #3b3f88);
+  box-shadow: 0 4px 12px rgba(80, 85, 150, 0.5);
+}
+
+.dark-mode .name-input-section button:hover,
+.dark-mode .goal-edit button:hover {
+  box-shadow: 0 6px 18px rgba(90, 95, 170, 0.6);
+}
+
+
+.dark-mode .quote-box {
+  background: rgba(20, 20, 20, 0.8);
+  color: #ddd;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+
+.dark-mode .stat-card {
+  background: rgba(30, 30, 30, 0.85);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .stat-card h3 {
+  color: #a4a8ff;
+}
+
+.dark-mode .stat-card p {
+  color: #ccc;
+}
+
+
+.dark-mode .goal-display,
+.dark-mode .goal-edit {
+  background: rgba(25, 25, 25, 0.8);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+}
+
+.dark-mode .goal-display p {
+  color: #ddd;
+}
+
+
+.dark-mode .music-player {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.55);
+}
+
+
+.dark-mode footer {
+  background: rgba(25, 25, 25, 0.7);
+  color: #ccc;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+}
+body.dark-mode .navbar {
+  background-color: #0f2a2e !important;
+  border-bottom: 1px solid #1c3a3e;
+}
+
+body.dark-mode .navbar .logo {
+  color: #26d9c3 !important;
+}
+
+body.dark-mode .navbar a {
+  color: #d3f9f7 !important;
+}
+
+body.dark-mode .navbar .active a {
+  color: #26d9c3 !important;
+}

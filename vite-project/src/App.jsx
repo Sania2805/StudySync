@@ -7,6 +7,7 @@ import Todo from "./pages/To-do"
 import Navbar from "./components/Navbar";
 
 function App(){
+  
   return (
     <BrowserRouter>
       <div>

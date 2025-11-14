@@ -1,5 +1,8 @@
 import { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSun, faMoon } from "@fortawesome/free-solid-svg-icons";
+
 import "../styles/Navbar.css"
 function Navbar(){
      const location = useLocation();
@@ -20,8 +23,19 @@ function Navbar(){
             console.error(error);
         }
     }
-
-    
+    const [isLight, setIsLight]=useState(true);
+    const handleToggleSwitch = () => {
+        setIsLight(!isLight);
+    };
+    useEffect(() => {
+        if (isLight) {
+             document.body.classList.remove("dark-mode");
+            document.body.classList.add("light-mode");
+        } else {
+            document.body.classList.remove("light-mode");
+            document.body.classList.add("dark-mode");
+        }
+    }, [isLight]);
 
     return (
         <nav className="navbar">
@@ -42,7 +56,17 @@ function Navbar(){
                 <li >
                     <div className="quote-btn" onClick={fetchQuote}>💡 Quote</div>
                 </li>
-                
+                <li>
+                    <div className="toggle-switch"style={{backgroundColor: isLight? "#d0e8ff" : "#282875ff" }} onClick={handleToggleSwitch}>
+                        <div className= {`switch ${isLight? "light" : "dark" }`}>
+                            <FontAwesomeIcon 
+                                icon={isLight ? faSun : faMoon} 
+                                 className="toggle-icon"
+                             />
+                            <span className="switch-state"></span>
+                        </div>
+                    </div>
+                </li>
                 </ul> 
                 {
                 isModalopen &&(
