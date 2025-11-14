@@ -291,3 +291,50 @@ body.dark-mode .navbar a {
 body.dark-mode .navbar .active a {
   color: #26d9c3 !important;
 }
+
+@media (max-width: 1024px) {
+  .overlay {
+    width: 95%;
+    padding: 2rem 1.5rem;
+  }
+  .greeting-box h2 {
+    font-size: 1.6rem;
+  }
+  .stat-card {
+    width: 45%;
+    min-width: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 1.5rem 1rem;
+  }
+  .name-input-section input,
+  .goal-edit input {
+    width: 100%;
+  }
+  .stat-card {
+    width: 100%;
+  }
+  .stats-section {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 420px) {
+  .overlay {
+    padding: 1rem;
+    border-radius: 18px;
+  }
+  .greeting-box h2 {
+    font-size: 1.3rem;
+  }
+  .greeting-box p, .quote-box, .stat-card p {
+    font-size: 0.95rem;
+  }
+  footer {
+    font-size: 0.9rem;
+  }
+}

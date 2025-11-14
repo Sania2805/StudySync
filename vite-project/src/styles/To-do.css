@@ -244,3 +244,58 @@ body.dark-mode{
     border-radius: 20px;
     transition: width 0.3s ease;
 }
+
+@media (max-width: 1024px) {
+    .todo-app {
+        max-width: 520px;
+        padding: 1.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .todo-app {
+        max-width: 92%;
+        padding: 1.25rem;
+        gap: 20px;
+    }
+    .name-input-section input, .goal-edit input, .input-area input {
+        width: 100%;
+    }
+    #numbers {
+        width: 64px;
+        height: 64px;
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 420px) {
+    .container {
+        padding: 0.5rem;
+    }
+    .todo-app {
+        max-width: 100%;
+        padding: 1rem;
+        gap: 14px;
+    }
+    .input-area input{
+        font-size: 1rem;
+        padding: 8px 10px;
+    }
+    .input-area button{
+        width: 36px;
+        height: 36px;
+        padding: 6px;
+    }
+    #task-list li {
+        font-size: 1rem;
+        padding: 8px;
+    }
+    #numbers {
+        width: 56px;
+        height: 56px;
+        font-size: 1rem;
+    }
+    #progress {
+        width: 45%;
+    }
+}

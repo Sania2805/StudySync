@@ -10,3 +10,13 @@
     margin-bottom: 10px;
    
 }
+
+@media (max-width: 420px) {
+    .no-tasks-icon {
+        font-size: 36px;
+    }
+    .no-tasks {
+        padding: 12px;
+        font-size: 0.95rem;
+    }
+}

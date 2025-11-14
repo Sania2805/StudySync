@@ -1,0 +1,21 @@
+html, body, #root {
+	height: 100%;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+* {
+	box-sizing: border-box;
+}
+
+@media (max-width: 420px) {
+	body {
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	}
+}
+
