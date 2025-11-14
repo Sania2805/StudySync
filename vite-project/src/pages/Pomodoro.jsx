@@ -71,11 +71,11 @@ const PomodoroTimer = () => {
   const progress = ((totalTime - timeLeft) / totalTime) * 100;
 
   return (
-    <motion.div className="pomodoro-dark"
+    <motion.div className="pomodoro-light"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}>
-      <motion.div className="glass-dark"
+      <motion.div className="glass-light"
         initial={{ opacity: 0, y: 40 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1, ease: "easeOut" }}>
@@ -100,13 +100,13 @@ const PomodoroTimer = () => {
         </div>
 
         <div className="buttons">
-          <button onClick={handleStartPause} className="btn-dark">
+          <button onClick={handleStartPause} className="btn-light">
             {isRunning ? "Pause" : "Start"}
           </button>
-          <button onClick={handleReset} className="btn-dark secondary">
+          <button onClick={handleReset} className="btn-light secondary">
             Reset
           </button>
-          <button onClick={handleSwitchToBreak} className="btn-dark accent">
+          <button onClick={handleSwitchToBreak} className="btn-light accent">
             Switch to Break
           </button>
         </div>

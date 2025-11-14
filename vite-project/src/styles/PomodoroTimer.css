@@ -1,31 +1,65 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
 
-.pomodoro-dark {
+:root {
+  --page-bg: linear-gradient(135deg,#ffff, hsl(101, 50%, 84%));
+  --panel-bg: #ffffff;
+  --panel-border: hsl(101, 50%, 64%);
+  --panel-shadow: 20px 20px 30px hsl(101, 50%, 74%);
+  --text-color: hsl(0, 5%, 20%);
+  --muted: #6b7280;
+  --accent: #4f46e5;
+  --accent-weak: rgba(79, 70, 229, 0.4);
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #e5e7eb;
+  --btn-secondary-text: #333333;
+  --btn-accent-bg: #facc15;
+  --btn-accent-text: #000000;
+  --select-bg: #f3f4f6;
+  --select-text: #333333;
+}
+body.dark-mode {
+  --page-bg: linear-gradient(135deg,#0f172a,#020617);
+  --panel-bg: #0b1220;
+  --panel-border: rgba(255,255,255,0.06);
+  --panel-shadow: 20px 20px 30px rgba(0,0,0,0.6);
+  --text-color: #e6eef8;
+  --muted: #9ca3af;
+  --accent: #7c8cff;
+  --accent-weak: rgba(124,140,255,0.15);
+  --btn-primary-text: #ffffff;
+  --btn-secondary-bg: #1f2937;
+  --btn-secondary-text: #e6eef8;
+  --btn-accent-bg: #f59e0b;
+  --btn-accent-text: #0b1220;
+  --select-bg: #111827;
+  --select-text: #e6eef8;
+}
+
+.pomodoro-light {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 90vh;
-  background: linear-gradient(135deg,#ffff, hsl(101, 50%, 84%));
+  background: var(--page-bg);
   font-family: 'Poppins', sans-serif;
 }
 
-.glass-dark {
-  background: #ffff; 
+.glass-light {
+  background: var(--panel-bg);
   backdrop-filter: blur(4px);
   border-radius: 25px;
-  border-right: 0.25rem groove hsl(101, 50%, 64%) ;
+  border-right: 0.25rem groove var(--panel-border);
   padding: 2rem 3rem;
-  box-shadow: 20px 20px 30px hsl(101, 50%, 74%);
+  box-shadow: var(--panel-shadow);
   text-align: center;
-  color: hsl(0, 5%,20%);
+  color: var(--text-color);
   width: 340px;
 }
-
 
 .mode-title {
   font-size: 1.5rem;
   margin-bottom: 1rem;
-  color: #444;
+  color: var(--text-color);
 }
 
 .circle {
@@ -41,13 +75,13 @@
 
 .progress-ring-bg {
   fill: none;
-  stroke: #e0e0e0;
+  stroke: rgba(0,0,0,0.06);
   stroke-width: 8;
 }
 
 .progress-ring-bar {
   fill: none;
-  stroke: #4f46e5;
+  stroke: var(--accent);
   stroke-width: 8;
   stroke-linecap: round;
   stroke-dasharray: 339;
@@ -72,9 +106,9 @@
   margin: 1.5rem 0;
 }
 
-.btn-dark {
-  background: #4f46e5;
-  color: #fff;
+.btn-light {
+  background: var(--accent);
+  color: var(--btn-primary-text);
   border: none;
   padding: 0.6rem 1.2rem;
   border-radius: 20px;
@@ -83,32 +117,32 @@
   transition: 0.3s;
 }
 
-.btn-dark:hover {
+.btn-light:hover {
   transform: scale(1.05);
-  box-shadow: 0 0 10px rgba(79, 70, 229, 0.4);
+  box-shadow: 0 0 10px var(--accent-weak);
 }
 
-.btn-dark.secondary {
-  background: #e5e7eb;
-  color: #333;
+.btn-light.secondary {
+  background: var(--btn-secondary-bg);
+  color: var(--btn-secondary-text);
 }
 
-.btn-dark.accent {
-  background: #facc15;
-  color: #000;
+.btn-light.accent {
+  background: var(--btn-accent-bg);
+  color: var(--btn-accent-text);
 }
 
 .settings {
   display: flex;
   justify-content: space-around;
   margin: 1rem 0;
-  color: #555;
+  color: var(--muted);
   font-size: 0.9rem;
 }
 
 .settings select {
-  background: #f3f4f6;
-  color: #333;
+  background: var(--select-bg);
+  color: var(--select-text);
   border: none;
   border-radius: 8px;
   padding: 0.3rem 0.6rem;
@@ -119,12 +153,12 @@
 .session {
   margin-top: 1rem;
   font-size: 0.9rem;
-  color: #555;
+  color: var(--muted);
 }
 
 .quote {
   margin-top: 1rem;
   font-size: 0.95rem;
   font-style: italic;
-  color: #6b7280;
+  color: var(--muted);
 }

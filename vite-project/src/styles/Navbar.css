@@ -4,7 +4,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: #fef9f6; /* soft pastel background */
+  background-color: #fef9f6; 
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
   position: sticky;
   top: 0;
@@ -44,12 +44,12 @@
 }
 
 .nav-links li a:hover {
-  background-color: #b5eaea; /* pastel hover */
+  background-color: #b5eaea; 
   color: #333;
 }
 
 .nav-links li.active a {
-  background-color: #ffd9b3; /* pastel active highlight */
+  background-color: #ffd9b3; 
   color: #333;
 }
  

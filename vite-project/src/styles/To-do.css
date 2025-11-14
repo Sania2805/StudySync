@@ -4,13 +4,61 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+:root{
+    --bg-image: url('https://i.pinimg.com/736x/46/d4/21/46d421ce0a562daab0b71d26923bf05a.jpg');
+    --bg-overlay-start: rgba(255,255,255,0.85);
+    --bg-overlay-end: rgba(255,255,255,0.6);
+    --panel-bg: rgba(255,255,255,0.65);
+    --panel-border: rgba(255, 255, 255, 0.18);
+    --panel-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
+    --text-color: #0b1220;
+    --muted: #333333;
+    --accent: hsl(29, 80%, 47%);
+    --accent-strong: rgb(182, 9, 55);
+    --card-bg: hsla(0, 74%, 72%, 0.5);
+    --card-hover-shadow: 0 0 10px rgba(0,0,0,0.1);
+    --checkbox-border: rgba(255,255,255,0.3);
+    --taskbtn-bg: rgba(224, 174, 174, 0.3);
+    --delete-btn-bg: #e0bd7a;
+    --stat-border: rgba(22, 19, 19, 0.18);
+    --progressbar-bg: rgba(255, 194, 209, 0.3);
+    --numbers-bg: #e6ae47;
+    --numbers-border: rgba(255,194,209,0.3);
+    --progress-bg: #be6b6b;
+}
+
+body.dark-mode{
+    --bg-overlay-start: rgba(4,8,16,0.7);
+    --bg-overlay-end: rgba(4,8,16,0.6);
+    --panel-bg: rgba(8,12,20,0.6);
+    --panel-border: rgba(255,255,255,0.06);
+    --panel-shadow: 0 0 60px rgba(0,0,0,0.8);
+    --text-color: #e6eef8;
+    --muted: #9ca3af;
+    --accent: #7c8cff;
+    --accent-strong: #e76b7b;
+    --card-bg: rgba(255,255,255,0.04);
+    --card-hover-shadow: 0 0 8px rgba(124,140,255,0.08);
+    --checkbox-border: rgba(255,255,255,0.06);
+    --taskbtn-bg: rgba(40,40,50,0.25);
+    --delete-btn-bg: #8b6a3a;
+    --stat-border: rgba(255,255,255,0.04);
+    --progressbar-bg: rgba(124,140,255,0.08);
+    --numbers-bg: #b87a1f;
+    --numbers-border: rgba(255,255,255,0.04);
+    --progress-bg: #7b3b3b;
+}
+
 .container{
     font-family: "Jost", sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: url('https://i.pinimg.com/736x/46/d4/21/46d421ce0a562daab0b71d26923bf05a.jpg') no-repeat center/cover;
+    /* image with subtle overlay to make text readable in both themes */
+    background: linear-gradient(var(--bg-overlay-start), var(--bg-overlay-end)), var(--bg-image) no-repeat center/cover;
+    transition: background-color 200ms ease, color 200ms ease;
 }
 .todo-app {
     width: 100%;
@@ -20,22 +68,24 @@
     align-items: center;
     flex-direction: column;
     gap: 30px;
-    
     border-radius: 20px;
-    box-shadow: 0 0 100px rgba(0, 0, 0, 0.5);
-    border: 3px solid rgba(255, 255, 255, 0.18);
+    box-shadow: var(--panel-shadow);
+    border: 3px solid var(--panel-border);
     backdrop-filter: blur(10px);
+    background: var(--panel-bg);
+    color: var(--text-color);
+    transition: background 200ms ease, color 200ms ease, box-shadow 200ms ease;
 }
 .todo-app h1{
     font-size: 2rem;
-
-}   
+    color: var(--text-color);
+}
 .input-area{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
-} 
+}
 .input-area input{
     flex: 1;
     padding: 10px 17px;
@@ -43,11 +93,13 @@
     border: none;
     outline: none;
     border-radius: 22px;
-    
-}    
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid rgba(0,0,0,0.06);
+}
 .input-area input::placeholder{
     font-family: Arial, Helvetica, sans-serif;
-
+    color: var(--muted);
 }
 .input-area button{
     display: flex;
@@ -56,16 +108,15 @@
     margin-left: 10px;
     padding: 8px;
     border-radius: 50%;
-    
-    color: hsl(29, 80%, 47%);
+    color: var(--accent);
     font-size: 1.1rem;
-    border: 2px solid ;
+    border: 2px solid transparent;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform 0.2s ease;
+    background: transparent;
 }
 .input-area button:hover {
     transform: scale(1.1);
-    
 }
 .todos-container {
     width: 100%;
@@ -82,32 +133,33 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: hsla(0, 74%, 72%, 0.5);
+    background: var(--card-bg);
     margin-bottom: 10px;
     padding: 8px 10px;
     border-radius: 30px;
     font-size: 1.2rem;
     position: relative;
-    transition: transform 0.5s ease,  box-shadow 0.5s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
     transform-origin: center;
+    border: 1px solid rgba(0,0,0,0.04);
 }
 #task-list li:hover{
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transform: scale(1.1);
+    box-shadow: var(--card-hover-shadow);
+    transform: scale(1.02);
 }
 #task-list li .checkbox {
     min-width: 20px;
     height: 20px;
-    border: 2px solid rgba(255,255,255,0.3);
+    border: 2px solid var(--checkbox-border);
     background: transparent;
     border-radius: 50%;
     appearance: none;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: all 0.15s ease;
 }
 #task-list li .checkbox:checked {
-    background: rgb(182, 9, 55);
-    transform: scale(1.1);
+    background: var(--accent-strong);
+    transform: scale(1.05);
 }
 #task-list li .checkbox:checked::before{
     content: '\2713';
@@ -121,6 +173,7 @@
     flex: 1;
     margin-left: 10px;
     word-wrap: break-word;
+    color: var(--text-color);
 }
 .task-buttons {
     display: flex;
@@ -128,35 +181,36 @@
     margin-right: auto;
 }
 .task-buttons button {
-    background: rgba(224, 174, 174, 0.3);
+    background: var(--taskbtn-bg);
     border: none;
     border-radius: 50%;
     width: 30px;
     height: 30px;
-    color: black;
+    color: var(--text-color);
     font-size: 0.8rem;
     cursor: pointer;
-    transition: all 0.2s ease;
+    transition: transform 0.15s ease;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .task-buttons button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
 }
 
 .task-buttons .delete-btn {
-    background: #e0bd7a;
+    background: var(--delete-btn-bg);
 }
 .stat-container{
     padding: 15px 20px;
     border-radius: 10px;
-    border: 2px solid rgba(22, 19, 19, 0.18);
+    border: 2px solid var(--stat-border);
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     width: 100%;
+    color: var(--text-color);
 }
 .details{
     width: 100%;
@@ -164,7 +218,7 @@
 #progressbar {
     width: 100%;
     height: 7px;
-    background: rgba(255, 194, 209, 0.3);
+    background: var(--progressbar-bg);
     border-radius: 20px;
     position: relative;
     margin-top: 15px;
@@ -175,18 +229,18 @@
     justify-content: center;
     width: 80px;
     height: 80px;
-    background: #e6ae47;
-    border: 2px solid rgba(255, 194,209,0.3);
+    background: var(--numbers-bg);
+    border: 2px solid var(--numbers-border);
     font-weight: bold;
     border-radius: 50%;
     font-size: 1.5rem;
-
+    color: var(--text-color);
 }
 
 #progress{
     width: 50%;
     height: 100%;
-    background: #be6b6b;
+    background: var(--progress-bg);
     border-radius: 20px;
     transition: width 0.3s ease;
 }

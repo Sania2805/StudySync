@@ -9,7 +9,7 @@ function Navbar(){
     const [quote, setQuote] = useState(null);
     const [isModalopen, setIsModalOpen] = useState(false);
     const [author, setAuthor] = useState(null);
-    const navigate = useNavigate();
+    
     const fetchQuote = async() => {
         try{
         const response = await fetch('https://quotes-api-self.vercel.app/quote')
